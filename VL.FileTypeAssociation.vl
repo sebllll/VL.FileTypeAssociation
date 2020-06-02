@@ -2,7 +2,7 @@
 <Document xmlns:p="property" Id="DvMD56XcVH4NxGAthM6kNL" LanguageVersion="2020.1.2.135" Version="0.128">
   <NugetDependency Id="Jmo3RkE3Y6ZPGav1zPkhDC" Location="VL.CoreLib" Version="2020.1.2" />
   <Patch Id="O8ZMtX43xBWLKh0SusIwXk">
-    <Canvas Id="AP8p3F4kbkfNuhfL1akHJp" DefaultCategory="System.Application" CanvasType="FullCategory">
+    <Canvas Id="AP8p3F4kbkfNuhfL1akHJp" DefaultCategory="System.Windows.FiletypeAssociation" CanvasType="FullCategory">
       <!--
 
     ************************ GetVLExecutable ************************
