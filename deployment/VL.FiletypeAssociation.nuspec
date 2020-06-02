@@ -12,6 +12,11 @@
     <description>Query Win API to retrieve information about associated Filetypes. Plugin for VL</description>
     <copyright>Copyright © 2019. All rights reserved.</copyright>
     <tags>VL, System, Application</tags>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="Microsoft.Win32.Registry" version="4.7.0" />
+      </group>
+    </dependencies>
 	<license type="expression">LGPL-3.0-only</license>
     <icon>icon\nugeticon.png</icon>
   </metadata>

@@ -39,54 +39,172 @@
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="L1cyT5vtQ5KNYMUDM9hzCF" Comment="" Bounds="167,328,501,2" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="165,503,97,19" Id="L0vUWH0rguiL9SnY1Vf8fm">
+          <Node Bounds="163,500,97,19" Id="L0vUWH0rguiL9SnY1Vf8fm">
             <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="QueryAssocString" />
+              <Choice Kind="ProcessAppFlag" Name="GetAssociation" />
             </p:NodeReference>
             <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="E9rj5ohnkM7Py2SoPiB7GX" Name="Association" Kind="InputPin" />
             <Pin Id="GMvdgr1KUkgOdBTkHCb29S" Name="Extension" Kind="InputPin" />
             <Pin Id="PkCUSnpyIWxNyHnuqJ0zOQ" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="AdqzZWYMCM4K9lxemdw5mf" Comment="Association" Bounds="167,460,139,15" ShowValueBox="true" isIOBox="true" Value="FriendlyDocName">
+          <Pad Id="AdqzZWYMCM4K9lxemdw5mf" Comment="Association" Bounds="165,457,139,15" ShowValueBox="true" isIOBox="true" Value="FriendlyDocName">
             <p:TypeAnnotation LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
               <Choice Kind="TypeFlag" Name="AssocStr" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="TM6R94LCvdrPfn5Wl406nQ" Comment="Extension" Bounds="259,489,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
+          <Pad Id="TM6R94LCvdrPfn5Wl406nQ" Comment="Extension" Bounds="257,486,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NN4GvFb9JZmOxya7JV4mEP" Comment="" Bounds="167,545,143,11" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="441,503,97,19" Id="BX1Wl5AGmkMMpu5hbgarCO">
+          <Pad Id="NN4GvFb9JZmOxya7JV4mEP" Comment="" Bounds="165,542,143,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="439,500,97,19" Id="BX1Wl5AGmkMMpu5hbgarCO">
             <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="QueryAssocString" />
+              <Choice Kind="ProcessAppFlag" Name="GetAssociation" />
             </p:NodeReference>
             <Pin Id="L6INeMe1QaHOS0S7Rmn6ra" Name="Association" Kind="InputPin" />
             <Pin Id="J6WB7bgLa3JQHMb4L7U5oT" Name="Extension" Kind="InputPin" />
             <Pin Id="LUOB5hdl36eMAH5dWtbGh6" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="EWyfPFBw0qiMyK4vDh0GHe" Comment="Association" Bounds="443,460,139,15" ShowValueBox="true" isIOBox="true" Value="AppPublisher">
+          <Pad Id="EWyfPFBw0qiMyK4vDh0GHe" Comment="Association" Bounds="441,457,139,15" ShowValueBox="true" isIOBox="true" Value="AppPublisher">
             <p:TypeAnnotation LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
               <Choice Kind="TypeFlag" Name="AssocStr" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="MK222xHXgj2Mfksae104Lx" Comment="Extension" Bounds="535,489,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
+          <Pad Id="MK222xHXgj2Mfksae104Lx" Comment="Extension" Bounds="533,486,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="Nyzw39EpUP5PZEg6kgDAFg" Comment="" Bounds="443,545,138,6" ShowValueBox="true" isIOBox="true" />
-          <Overlay Id="Agh7my3DAA0MH0ndLNYeIl" Name="Query the API directly" Bounds="145,388,546,188">
+          <Pad Id="Nyzw39EpUP5PZEg6kgDAFg" Comment="" Bounds="441,542,138,15" ShowValueBox="true" isIOBox="true" />
+          <Overlay Id="Agh7my3DAA0MH0ndLNYeIl" Name="Query the API directly" Bounds="143,385,546,188">
             <p:ColorIndex p:Type="Int32">7</p:ColorIndex>
           </Overlay>
           <Overlay Id="R1GxfQTIFc8NqbKZIEOFTN" Name="Shortcut Nodes for common usecase" Bounds="146,134,545,221">
             <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
           </Overlay>
-          <Pad Id="VXRFwcW0e6GNKhEuxXX0SE" Bounds="356,408,162,19" ShowValueBox="true" isIOBox="true" Value="(enable Advanced Aspect)">
+          <Pad Id="VXRFwcW0e6GNKhEuxXX0SE" Bounds="136,420,162,19" ShowValueBox="true" isIOBox="true" Value="(enable Advanced Aspect)">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">7</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="515,861,130,19" Id="RYyRUhIxXrnOH2lwX60y9K">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetAssociatedExecutable" />
+            </p:NodeReference>
+            <Pin Id="HSdRvObfd4SMTF1JlVOTiO" Name="Extension" Kind="InputPin" />
+            <Pin Id="LgWy2Fcig6nNikTA560Pre" Name="Result" Kind="OutputPin" />
+            <Pin Id="AxXaPdnhYzEMPEyq8427IS" Name="Force" Kind="InputPin" />
+          </Node>
+          <Pad Id="KcG735EQzPBLBrYnWmgMU1" Comment="Extension" Bounds="517,842,35,15" ShowValueBox="true" isIOBox="true" Value=".v4p">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Hd65S6P1UQJOn0RF30m06S" Comment="" Bounds="517,897,185,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="QoCaGJu060iNwFVq8Ctruc" Comment="Force" Bounds="642,842,36,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="515,745,213,19" Id="E2TUvsITCyBMgt5jHnkyet">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetAssociation" />
+            </p:NodeReference>
+            <Pin Id="VwdIHUqFXyTMq6ita2iCMF" Name="Association" Kind="InputPin" />
+            <Pin Id="V2oPVd0Ec4IO5E4j9ADI0o" Name="Extension" Kind="InputPin" />
+            <Pin Id="FUfdkMuzKkYLqWWFUYdW1z" Name="Result" Kind="OutputPin" />
+            <Pin Id="HaODucA04W4M9Sf3aZNskH" Name="Force" Kind="InputPin" />
+          </Node>
+          <Pad Id="VGXjiplImXtM9P4pal6XGI" Comment="Association" Bounds="517,686,139,15" ShowValueBox="true" isIOBox="true" Value="FriendlyDocName">
+            <p:TypeAnnotation LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
+              <Choice Kind="TypeFlag" Name="AssocStr" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="PdXdVOdp7DgMMZWLB1dvE6" Comment="Extension" Bounds="621,716,35,15" ShowValueBox="true" isIOBox="true" Value=".v4p">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BWM6lWfbA0YM7M3HcJiQfB" Comment="" Bounds="517,787,179,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="HHHc3C5ygJeLRg04ntkBRA" Comment="Force" Bounds="725,706,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Overlay Id="VOKCKU1dpqVNFGFAKxmOvk" Name="Set Association" Bounds="143,601,711,364">
+            <p:ColorIndex p:Type="Int32">5</p:ColorIndex>
+          </Overlay>
+          <Overlay Id="Pr2OKd1nIJJMAnU3Lra0Ng" Name="Query after Set" Bounds="501,626,314,284">
+            <p:ColorIndex p:Type="Int32">10</p:ColorIndex>
+          </Overlay>
+          <Node Bounds="174,852,105,19" Id="Ukijp3wooc7QC0Vnc1qgWl">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SetAssociation" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="Qqz9uAq2X99LdiWOLlecQW" Name="Executable FilePath" Kind="InputPin" />
+            <Pin Id="TuaBNGEHUD0K9auDlOCazd" Name="Extension" Kind="InputPin" />
+            <Pin Id="HY9PZUm2Kl1LGgnqSI4P8T" Name="ProgID" Kind="InputPin" />
+            <Pin Id="TtJQnXhaB2RMFotjAlMCEc" Name="FileType Description" Kind="InputPin" />
+            <Pin Id="NPcWkDrknexMm0UI7EySkv" Name="Force" Kind="InputPin" />
+            <Pin Id="LJEBbfv6wUpNVO9lgxPx6a" Name="new Association Set" Kind="OutputPin" />
+          </Node>
+          <Pad Id="DT5i7EjBS4PNwupIJ4wdxN" Comment="Force" Bounds="276,817,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Cxkg46e89GeOkjOjLUHbTi" Comment="Executable FilePath" Bounds="176,704,196,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\vvvv\vvvv_beta_39_x64\vvvv.exe">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="QRWD4yg3oVOMG72zRulLqd" Comment="Extension" Bounds="201,731,35,15" ShowValueBox="true" isIOBox="true" Value=".v4p">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BS5b6nVfq6eL8gw4zKV8Oh" Comment="ProgID" Bounds="226,760,35,15" ShowValueBox="true" isIOBox="true" Value="vvvv">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NO9RJxgJOTWLrVj0XWJb0t" Comment="FileType Description" Bounds="251,787,94,15" ShowValueBox="true" isIOBox="true" Value="a vvvv Patch">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="B1MHRdSHzrHPUiTVuF5OYX" Comment="new Association Set" Bounds="176,903,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SCuvfDrYA3hQEUv6b3TzIH" Bounds="460,783,36,19" ShowValueBox="true" isIOBox="true" Value="--&gt;">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="SSLqBgGEW7iPpPFiIZNlwH" Bounds="136,637,162,19" ShowValueBox="true" isIOBox="true" Value="(enable Advanced Aspect)">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -111,6 +229,19 @@
         <Link Id="JHxkfvkNsDfNv5lPI7Vv5x" Ids="EWyfPFBw0qiMyK4vDh0GHe,L6INeMe1QaHOS0S7Rmn6ra" />
         <Link Id="BjW9F6rc0E0MEFxBcflGHi" Ids="MK222xHXgj2Mfksae104Lx,J6WB7bgLa3JQHMb4L7U5oT" />
         <Link Id="LN4Yk931uWQP8m0KFC3H48" Ids="LUOB5hdl36eMAH5dWtbGh6,Nyzw39EpUP5PZEg6kgDAFg" />
+        <Link Id="S967ijCMEYOPTFgElS2Qnn" Ids="KcG735EQzPBLBrYnWmgMU1,HSdRvObfd4SMTF1JlVOTiO" />
+        <Link Id="HfzTI4ypwZnPtDSUVeD43Z" Ids="LgWy2Fcig6nNikTA560Pre,Hd65S6P1UQJOn0RF30m06S" />
+        <Link Id="HrwxSpEmJ6mP9gLUiqX5xM" Ids="QoCaGJu060iNwFVq8Ctruc,AxXaPdnhYzEMPEyq8427IS" />
+        <Link Id="C5JBjX1aYdJNf3DWAGucsj" Ids="VGXjiplImXtM9P4pal6XGI,VwdIHUqFXyTMq6ita2iCMF" />
+        <Link Id="RzOCk6UIvPqNimyi84YqDi" Ids="PdXdVOdp7DgMMZWLB1dvE6,V2oPVd0Ec4IO5E4j9ADI0o" />
+        <Link Id="Hr6wKl0zD0YNbzlOYrWr5R" Ids="FUfdkMuzKkYLqWWFUYdW1z,BWM6lWfbA0YM7M3HcJiQfB" />
+        <Link Id="FOQsVedYhmANnqCLvBamVh" Ids="HHHc3C5ygJeLRg04ntkBRA,HaODucA04W4M9Sf3aZNskH" />
+        <Link Id="T1IpVxrPFvALYzZNcGd0Gv" Ids="DT5i7EjBS4PNwupIJ4wdxN,NPcWkDrknexMm0UI7EySkv" />
+        <Link Id="M3r9yFJbP5iO0yQrKx5egc" Ids="Cxkg46e89GeOkjOjLUHbTi,Qqz9uAq2X99LdiWOLlecQW" />
+        <Link Id="Rz6i1D7heRjPW9JDb8YGQq" Ids="QRWD4yg3oVOMG72zRulLqd,TuaBNGEHUD0K9auDlOCazd" />
+        <Link Id="Qqy8Tx6UCO2Og5XW7H0Dyg" Ids="BS5b6nVfq6eL8gw4zKV8Oh,HY9PZUm2Kl1LGgnqSI4P8T" />
+        <Link Id="JLP5WiMecNePTCEyycaaNt" Ids="NO9RJxgJOTWLrVj0XWJb0t,TtJQnXhaB2RMFotjAlMCEc" />
+        <Link Id="DWalq2XrSwLPrHTjH5Akeb" Ids="LJEBbfv6wUpNVO9lgxPx6a,B1MHRdSHzrHPUiTVuF5OYX" />
       </Patch>
     </Node>
   </Patch>
