@@ -50,7 +50,7 @@
             <Pin Id="PkCUSnpyIWxNyHnuqJ0zOQ" Name="Result" Kind="OutputPin" />
           </Node>
           <Pad Id="AdqzZWYMCM4K9lxemdw5mf" Comment="Association" Bounds="167,460,139,15" ShowValueBox="true" isIOBox="true" Value="FriendlyDocName">
-            <p:TypeAnnotation LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+            <p:TypeAnnotation LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
               <Choice Kind="TypeFlag" Name="AssocStr" />
             </p:TypeAnnotation>
           </Pad>
@@ -59,7 +59,7 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NN4GvFb9JZmOxya7JV4mEP" Comment="" Bounds="167,545,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="NN4GvFb9JZmOxya7JV4mEP" Comment="" Bounds="167,545,143,11" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="441,503,97,19" Id="BX1Wl5AGmkMMpu5hbgarCO">
             <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -70,7 +70,7 @@
             <Pin Id="LUOB5hdl36eMAH5dWtbGh6" Name="Result" Kind="OutputPin" />
           </Node>
           <Pad Id="EWyfPFBw0qiMyK4vDh0GHe" Comment="Association" Bounds="443,460,139,15" ShowValueBox="true" isIOBox="true" Value="AppPublisher">
-            <p:TypeAnnotation LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+            <p:TypeAnnotation LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
               <Choice Kind="TypeFlag" Name="AssocStr" />
             </p:TypeAnnotation>
           </Pad>
@@ -79,7 +79,7 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="Nyzw39EpUP5PZEg6kgDAFg" Comment="" Bounds="443,545,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Nyzw39EpUP5PZEg6kgDAFg" Comment="" Bounds="443,545,138,6" ShowValueBox="true" isIOBox="true" />
           <Overlay Id="Agh7my3DAA0MH0ndLNYeIl" Name="Query the API directly" Bounds="145,388,546,188">
             <p:ColorIndex p:Type="Int32">7</p:ColorIndex>
           </Overlay>
