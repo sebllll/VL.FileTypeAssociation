@@ -262,7 +262,16 @@
                 <ControlPoint Id="FdHv4GxFcEzOjsZ265oplw" Bounds="561,385" Alignment="Bottom" />
               </Node>
               <ControlPoint Id="Lmot8w4kKuYP75EqZ6Z6GZ" Bounds="992,190" />
-              <ControlPoint Id="O6O8XFAllLLLnlW8KJ3xqt" Bounds="561,422" />
+              <ControlPoint Id="O6O8XFAllLLLnlW8KJ3xqt" Bounds="529,461" />
+              <Node Bounds="527,411,37,19" Id="RXgbyf9xWrXOkWMTTTfk5E">
+                <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="AND" />
+                </p:NodeReference>
+                <Pin Id="RB2874h9vTJL5u2PHzzyJJ" Name="Input" Kind="StateInputPin" />
+                <Pin Id="QPGgjeMajkSPxXoTppejQj" Name="Input 2" Kind="InputPin" />
+                <Pin Id="GivflWVzCnOM7q34CY59Ws" Name="Output" Kind="StateOutputPin" />
+              </Node>
             </Canvas>
             <ProcessDefinition Id="HpUxwFYIsrUPTmaYNR6fTC">
               <Fragment Id="VnAU1xsYkCjOgluPQfNdd0" Patch="CR36ZXeOO2zOsXC8eBgvmL" Enabled="true" />
@@ -297,8 +306,10 @@
             <Link Id="SBv6JM30dZyOvvMA6wx0u4" Ids="L3aqfTUiTekLGy0KKcqFcC,LOD9xgZWndDP0ikOEJX4Ae" />
             <Link Id="P9NLuxf9dQFPKn2WnOtaek" Ids="BI7RuzSBuL0ONxCo2dveej,C2YcUlR6lY8Nm4R1lZT6Qh" />
             <Link Id="IH3HTD8lJfwOOt3vrYuVMk" Ids="L0rhpkaAbQiNaeMAQ4L9C9,FdHv4GxFcEzOjsZ265oplw" />
-            <Link Id="CPaJVMn8EBqNyagJ0IzYd1" Ids="FdHv4GxFcEzOjsZ265oplw,O6O8XFAllLLLnlW8KJ3xqt" />
             <Link Id="BJGAe9TXqJcMxmoD7RiCrl" Ids="O6O8XFAllLLLnlW8KJ3xqt,V1h7u8HUDUUN66QX4kpagL" IsHidden="true" />
+            <Link Id="O6PyMkQcVuxODGpPQbsqah" Ids="FdHv4GxFcEzOjsZ265oplw,QPGgjeMajkSPxXoTppejQj" />
+            <Link Id="PF9YkOEcwgqL0uqtq97g8g" Ids="OtnOEvIPwmqORVzHAkfyGL,RB2874h9vTJL5u2PHzzyJJ" />
+            <Link Id="EIZR8PQwt7iN0pyh2KPrr9" Ids="GivflWVzCnOM7q34CY59Ws,O6O8XFAllLLLnlW8KJ3xqt" />
           </Patch>
         </Node>
       </Canvas>
