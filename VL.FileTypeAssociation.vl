@@ -38,9 +38,8 @@
                 <Patch Id="HOFrkGlISh2QIrFeWlgxWV" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Jw4ut5hbFkmO32xSkbNhFK" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="359,212" Id="S7dDSKWBCySLYeANABR8YD">
-                  <p:NodeReference LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+                  <p:NodeReference LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="AssemblyCategory" Name="DefaultApplication" />
                     <Choice Kind="OperationCallFlag" Name="AssocQueryString" />
                   </p:NodeReference>
                   <Pin Id="IdXHQ8Xt7aIMWdfMfOTdaj" Name="Association" Kind="InputPin" />
@@ -95,9 +94,8 @@
                 <Patch Id="JvtjMGegPONOjZodpgTviy" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="IfGkH4FkRppOOkvcJHFqJk" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="359,212" Id="CPbjtBtWSA9OKlpp5LpSf3">
-                  <p:NodeReference LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+                  <p:NodeReference LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="AssemblyCategory" Name="DefaultApplication" />
                     <Choice Kind="OperationCallFlag" Name="AssocQueryString" />
                   </p:NodeReference>
                   <Pin Id="Kc1WyBdWRCKNcBthnNBUwc" Name="Association" Kind="InputPin" />
@@ -161,9 +159,8 @@
                   <Patch Id="PqTgXsWLAEPP9uNrKMW98G" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="BOc4Th7VcRMNwvYAz0c0Lr" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="359,207,97,19" Id="CC5Ee5fW19GOMUtln4Pz5J">
-                    <p:NodeReference LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+                    <p:NodeReference LastCategoryFullName="System.QueryAPI" LastSymbolSource="FiletypeAssoc.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <CategoryReference Kind="AssemblyCategory" Name="DefaultApplication" />
                       <Choice Kind="OperationCallFlag" Name="AssocQueryString" />
                     </p:NodeReference>
                     <Pin Id="GqYMTskZjlGOarQbDr53n6" Name="Association" Kind="InputPin" />
@@ -223,5 +220,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="Hu2UoaRc8FyQZnDFiZvJJL" Location="VL.Skia" Version="2020.1.2" />
-  <PlatformDependency Id="Fxy9IODd0SMNl2PVXjGm0X" Location="./lib/netstandard2.0/DefaultApplication.dll" />
+  <PlatformDependency Id="QCwImN80sXMLJk0HTDfOhv" Location="./lib/FiletypeAssoc.dll" />
 </Document>
