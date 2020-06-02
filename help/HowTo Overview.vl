@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="ErxTtCas2bkPo3CNcbhFZu" LanguageVersion="2020.1.2.135" Version="0.128">
+  <NugetDependency Id="A69VWTSLJ0qMeeWnILXoeL" Location="VL.CoreLib" Version="2020.1.2" />
+  <Patch Id="VoVdDczu7cSLBhexLJaYyk">
+    <Canvas Id="BgXxOVmTBRDQClaxbjAxmD" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="QbVErPiDeH0QbURtBwSY8B">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="KcgVO5yh1a0Lx80i2mpkt1">
+        <Canvas Id="G6KZAaboSqfNvgWqLdDYCI" CanvasType="Group">
+          <Node Bounds="165,187,118,19" Id="S8oN6R9pObcOb3gEovFA6q">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetVLExecutable" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="R58n5oz7HEbLbQbBXo9muw" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TyMzUul8FlHL0oKaIcyZX0" Comment="" Bounds="167,227,502,-8" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="165,292,130,19" Id="VJ7SIGJt5QXLL85AJNGKAA">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetAssociatedExecutable" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="DfHpzvNINyPPib39YHzq0g" Name="Extension" Kind="InputPin" />
+            <Pin Id="HBGGLudXtrNMq9voKUJjFB" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="LLKVSJkTaNrLPNsty0NN0x" Comment="Extension" Bounds="167,274,35,15" ShowValueBox="true" isIOBox="true" Value=".cs">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="L1cyT5vtQ5KNYMUDM9hzCF" Comment="" Bounds="167,328,501,2" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="165,503,97,19" Id="L0vUWH0rguiL9SnY1Vf8fm">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="QueryAssocString" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="E9rj5ohnkM7Py2SoPiB7GX" Name="Association" Kind="InputPin" />
+            <Pin Id="GMvdgr1KUkgOdBTkHCb29S" Name="Extension" Kind="InputPin" />
+            <Pin Id="PkCUSnpyIWxNyHnuqJ0zOQ" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="AdqzZWYMCM4K9lxemdw5mf" Comment="Association" Bounds="167,460,139,15" ShowValueBox="true" isIOBox="true" Value="FriendlyDocName">
+            <p:TypeAnnotation LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+              <Choice Kind="TypeFlag" Name="AssocStr" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TM6R94LCvdrPfn5Wl406nQ" Comment="Extension" Bounds="259,489,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NN4GvFb9JZmOxya7JV4mEP" Comment="" Bounds="167,545,35,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="441,503,97,19" Id="BX1Wl5AGmkMMpu5hbgarCO">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="VL.FileTypeAssociation.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="QueryAssocString" />
+            </p:NodeReference>
+            <Pin Id="L6INeMe1QaHOS0S7Rmn6ra" Name="Association" Kind="InputPin" />
+            <Pin Id="J6WB7bgLa3JQHMb4L7U5oT" Name="Extension" Kind="InputPin" />
+            <Pin Id="LUOB5hdl36eMAH5dWtbGh6" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="EWyfPFBw0qiMyK4vDh0GHe" Comment="Association" Bounds="443,460,139,15" ShowValueBox="true" isIOBox="true" Value="AppPublisher">
+            <p:TypeAnnotation LastCategoryFullName="System.DefaultApplication" LastSymbolSource="DefaultApplication.dll">
+              <Choice Kind="TypeFlag" Name="AssocStr" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="MK222xHXgj2Mfksae104Lx" Comment="Extension" Bounds="535,489,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Nyzw39EpUP5PZEg6kgDAFg" Comment="" Bounds="443,545,35,15" ShowValueBox="true" isIOBox="true" />
+          <Overlay Id="Agh7my3DAA0MH0ndLNYeIl" Name="Query the API directly" Bounds="145,388,546,188">
+            <p:ColorIndex p:Type="Int32">7</p:ColorIndex>
+          </Overlay>
+          <Overlay Id="R1GxfQTIFc8NqbKZIEOFTN" Name="Shortcut Nodes for common usecase" Bounds="146,134,545,221">
+            <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
+          </Overlay>
+          <Pad Id="VXRFwcW0e6GNKhEuxXX0SE" Bounds="356,408,162,19" ShowValueBox="true" isIOBox="true" Value="(enable Advanced Aspect)">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">7</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="Ff51F2J6Td7L2YGkyfVQNa" Name="Create" />
+        <Patch Id="Cid2OOrNrfPNePZV7bEWdy" Name="Update" />
+        <ProcessDefinition Id="CNaEouEdYR4OUoGULzHqeA">
+          <Fragment Id="EfxPzmhHEozOCTmt6QKrBk" Patch="Ff51F2J6Td7L2YGkyfVQNa" Enabled="true" />
+          <Fragment Id="HAhnab1TTjvQSGRsvlgDJa" Patch="Cid2OOrNrfPNePZV7bEWdy" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="JNYk1oiE8x9PSFijVWaTvx" Ids="R58n5oz7HEbLbQbBXo9muw,TyMzUul8FlHL0oKaIcyZX0" />
+        <Link Id="U6Te4m06FfIPsiuU07iRaU" Ids="LLKVSJkTaNrLPNsty0NN0x,DfHpzvNINyPPib39YHzq0g" />
+        <Link Id="MdtM7ryHl3gMgDy1epJe0h" Ids="HBGGLudXtrNMq9voKUJjFB,L1cyT5vtQ5KNYMUDM9hzCF" />
+        <Link Id="QCWALZnXFw1NsYkJzt6TyR" Ids="AdqzZWYMCM4K9lxemdw5mf,E9rj5ohnkM7Py2SoPiB7GX" />
+        <Link Id="UIR7GYpPCAuMUF9454CU3R" Ids="TM6R94LCvdrPfn5Wl406nQ,GMvdgr1KUkgOdBTkHCb29S" />
+        <Link Id="D3oUT8XU9qfP0hVh4f3vgO" Ids="PkCUSnpyIWxNyHnuqJ0zOQ,NN4GvFb9JZmOxya7JV4mEP" />
+        <Link Id="JHxkfvkNsDfNv5lPI7Vv5x" Ids="EWyfPFBw0qiMyK4vDh0GHe,L6INeMe1QaHOS0S7Rmn6ra" />
+        <Link Id="BjW9F6rc0E0MEFxBcflGHi" Ids="MK222xHXgj2Mfksae104Lx,J6WB7bgLa3JQHMb4L7U5oT" />
+        <Link Id="LN4Yk931uWQP8m0KFC3H48" Ids="LUOB5hdl36eMAH5dWtbGh6,Nyzw39EpUP5PZEg6kgDAFg" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="RubnvSoHFH8Pogi7a2NrFa" Location="VL.Skia" Version="2020.1.2" />
+  <DocumentDependency Id="RaToLfRJG8GObObr0HWg2o" Location="../VL.FileTypeAssociation.vl" />
+</Document>
