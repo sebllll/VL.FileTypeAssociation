@@ -39,7 +39,7 @@ jobs:
     - name: Nuget Pack
       run: nuget pack ./deployment/VL.FileTypeAssociation.nuspec -Version ${{env.VERSION}}
       env:
-        VERSION: 0.1.${{github.run_number}}
+        VERSION: 0.2.${{github.run_number}}
       
     - name: Nuget Push
       run: nuget push *.nupkg ${{secrets.NUGET_KEY}} -src https://api.nuget.org/v3/index.json -NoSymbols
