@@ -16,11 +16,13 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@master
       
-    - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
-      
+    # - name: Setup MSBuild.exe
+    #   uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+
     - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.4.0
+      uses: actions/setup-dotnet@v3
   
     - name: Build
       run: msbuild src\FiletypeAssoc\FiletypeAssoc.sln /t:Build /v:m /m /restore /p:Configuration=Release 

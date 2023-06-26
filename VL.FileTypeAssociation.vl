@@ -37,7 +37,7 @@
               <Patch Id="Pl38XfapyukORWQoYbOFWQ" ManuallySortedPins="true">
                 <Patch Id="HOFrkGlISh2QIrFeWlgxWV" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Jw4ut5hbFkmO32xSkbNhFK" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="359,212" Id="S7dDSKWBCySLYeANABR8YD">
+                <Node Bounds="359,212,25,19" Id="S7dDSKWBCySLYeANABR8YD">
                   <p:NodeReference LastCategoryFullName="System.QueryAPI" LastDependency="FiletypeAssoc.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="AssocQueryString" />
@@ -97,7 +97,7 @@
               <Patch Id="C3Q47oII2WYNk3bLJERZ4R" ManuallySortedPins="true">
                 <Patch Id="JvtjMGegPONOjZodpgTviy" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="IfGkH4FkRppOOkvcJHFqJk" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="359,212" Id="CPbjtBtWSA9OKlpp5LpSf3">
+                <Node Bounds="359,212,25,19" Id="CPbjtBtWSA9OKlpp5LpSf3">
                   <p:NodeReference LastCategoryFullName="System.QueryAPI" LastDependency="FiletypeAssoc.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="AssocQueryString" />
