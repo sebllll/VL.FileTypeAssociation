@@ -3,16 +3,19 @@ using System;
 using Microsoft.Extensions.Logging;
 using VL.Core;
 using VL.Core.Import;
+using VL.Lib.IO;
 
-namespace FiletypeAssoc
+namespace System.Windows.FiletypeAssociation
 {
     /// <summary>
-    /// Sets a Windows file type association for the current user by writing the relevant keys
-    /// under HKEY_CURRENT_USER\Software\Classes and notifying the shell. Triggered on the rising
-    /// edge of Set.
+    /// Registers a file type for the current user by writing the classic association keys under
+    /// HKEY_CURRENT_USER\Software\Classes. This sets the *fallback* handler: it works when the user
+    /// has not yet chosen a default, but will NOT override a default the user already picked. To
+    /// force the effective default, use SetFiletypeAssociationProtected instead.
+    /// Runs while Execute is true - connect a bang.
     /// </summary>
     [ProcessNode]
-    public class SetFileAssociations
+    public class SetFiletypeAssociation
     {
         /// <summary>
         /// needed so that Explorer windows get refreshed after the registry is updated
@@ -24,48 +27,49 @@ namespace FiletypeAssoc
         private const int SHCNF_FLUSH = 0x1000;
 
         private readonly ILogger _logger;
-        private bool   _lastSet;
         private bool   _madeChanges;
         private string _lastError = "";
 
         /// <summary>Initializes the node and acquires a logger from the node context.</summary>
-        public SetFileAssociations(NodeContext nodeContext)
+        public SetFiletypeAssociation(NodeContext nodeContext)
         {
             _logger = nodeContext.GetLogger();
         }
 
         /// <summary>
-        /// Set a FileType Association for the current user. Triggers on the rising edge of <paramref name="set"/>.
+        /// Registers the fallback file type association for the current user.
+        /// Runs while <paramref name="execute"/> is true - connect a bang.
         /// </summary>
-        /// <param name="madeChanges">True if the last apply actually wrote to the registry.</param>
-        /// <param name="lastError">Error message from the last failed apply, or empty on success.</param>
-        /// <param name="extension">File extension to associate, including the leading dot, e.g. '.foo'.</param>
-        /// <param name="progId">Programmatic identifier (ProgId) to register for the extension, e.g. 'MyApp.foo'.</param>
-        /// <param name="fileTypeDescription">Human-readable description shown for the file type.</param>
-        /// <param name="applicationFilePath">Full path to the executable that opens the file.</param>
-        /// <param name="set">Bang to apply the association. Triggers on rising edge only.</param>
+        /// <param name="madeChanges">True if this apply actually changed something in the registry (false if it was already set).</param>
+        /// <param name="lastError">Message of the last error, or empty if the last apply succeeded.</param>
+        /// <param name="applicationFilePath">Path to the program that should open the file, e.g. the vvvv.exe.</param>
+        /// <param name="extension">File extension to associate, with the leading dot, e.g. '.foo'.</param>
+        /// <param name="progId">Internal identifier registered for this file type, e.g. 'MyApp.foo'. Any unique name; reuse the same one to update an existing association.</param>
+        /// <param name="fileTypeDescription">Friendly name shown for the file type in Explorer, e.g. 'My Foo document'.</param>
+        /// <param name="execute">While true, (re)applies the association every frame. Connect a bang to do it once.</param>
         public void Update(
             out bool   madeChanges,
             out string lastError,
+            Path       applicationFilePath = default,
             string     extension           = ".foo",
             string     progId              = "MyApp.foo",
             string     fileTypeDescription = "",
-            string     applicationFilePath = "",
-            bool       set                 = false)
+            bool       execute             = false)
         {
-            if (set && !_lastSet)
+            if (execute)
             {
                 _lastError = "";
                 try
                 {
+                    var app = applicationFilePath?.ToString() ?? "";
                     _logger.LogInformation(
                         "SetAssociation: extension={Extension}, progId={ProgId}, description={Description}, app={App}",
-                        extension, progId, fileTypeDescription, applicationFilePath);
+                        extension, progId, fileTypeDescription, app);
 
                     bool changed = false;
                     changed |= SetKeyDefaultValue(@"Software\Classes\" + extension, progId);
                     changed |= SetKeyDefaultValue(@"Software\Classes\" + progId, fileTypeDescription);
-                    changed |= SetKeyDefaultValue($@"Software\Classes\{progId}\shell\open\command", "\"" + applicationFilePath + "\" \"%1\"");
+                    changed |= SetKeyDefaultValue($@"Software\Classes\{progId}\shell\open\command", "\"" + app + "\" \"%1\"");
 
                     if (changed)
                     {
@@ -86,7 +90,6 @@ namespace FiletypeAssoc
                     _logger.LogError(ex, "SetAssociation failed for {Extension} -> {ProgId}: {Message}", extension, progId, ex.Message);
                 }
             }
-            _lastSet = set;
 
             madeChanges = _madeChanges;
             lastError   = _lastError;

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FiletypeAssoc</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.FiletypeAssociation.GetFiletypeAssociation">
+            <summary>
+            Asks Windows what is associated with a file extension or protocol - the program that opens it,
+            its friendly name, default icon, content type, etc. Pick the kind of info with the Association
+            pin. Runs while Execute is true - connect a bang.
+            </summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.GetFiletypeAssociation.#ctor(VL.Core.NodeContext)">
+            <summary>Initializes the node and acquires a logger from the node context.</summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.GetFiletypeAssociation.Update(System.String@,System.String@,System.Windows.FiletypeAssociation.GetFiletypeAssociation.AssocStr,System.String,System.Boolean)">
+            <summary>
+            Looks up the requested association info for an extension or protocol.
+            Runs while <paramref name="execute"/> is true - connect a bang.
+            </summary>
+            <param name="result">The looked-up value from the last successful query, or empty.</param>
+            <param name="lastError">Message of the last error (e.g. when no association exists), or empty on success.</param>
+            <param name="association">Which piece of info to return: Executable = path to the opening program, FriendlyAppName = its display name, DefaultIcon, ContentType (MIME), Command, etc.</param>
+            <param name="extension">File extension to look up, with the leading dot, e.g. '.txt'. Can also be a protocol like 'http'.</param>
+            <param name="execute">While true, queries every frame. Connect a bang to do it once.</param>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.GetFiletypeAssociation.AssocQueryString(System.Windows.FiletypeAssociation.GetFiletypeAssociation.AssocStr,System.String)">
+            <summary>
+            Returns the association string of the requested kind for the given extension or protocol.
+            </summary>
+            <param name="association">Which associated string to retrieve (e.g. Executable, FriendlyAppName, DefaultIcon).</param>
+            <param name="extension">File extension (e.g. '.txt') or protocol to query.</param>
+        </member>
+        <member name="T:System.Windows.FiletypeAssociation.SetFiletypeAssociation">
+            <summary>
+            Registers a file type for the current user by writing the classic association keys under
+            HKEY_CURRENT_USER\Software\Classes. This sets the *fallback* handler: it works when the user
+            has not yet chosen a default, but will NOT override a default the user already picked. To
+            force the effective default, use SetFiletypeAssociationProtected instead.
+            Runs while Execute is true - connect a bang.
+            </summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.SetFiletypeAssociation.SHChangeNotify(System.Int32,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            needed so that Explorer windows get refreshed after the registry is updated
+            </summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.SetFiletypeAssociation.#ctor(VL.Core.NodeContext)">
+            <summary>Initializes the node and acquires a logger from the node context.</summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.SetFiletypeAssociation.Update(System.Boolean@,System.String@,VL.Lib.IO.Path,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Registers the fallback file type association for the current user.
+            Runs while <paramref name="execute"/> is true - connect a bang.
+            </summary>
+            <param name="madeChanges">True if this apply actually changed something in the registry (false if it was already set).</param>
+            <param name="lastError">Message of the last error, or empty if the last apply succeeded.</param>
+            <param name="applicationFilePath">Path to the program that should open the file, e.g. the vvvv.exe.</param>
+            <param name="extension">File extension to associate, with the leading dot, e.g. '.foo'.</param>
+            <param name="progId">Internal identifier registered for this file type, e.g. 'MyApp.foo'. Any unique name; reuse the same one to update an existing association.</param>
+            <param name="fileTypeDescription">Friendly name shown for the file type in Explorer, e.g. 'My Foo document'.</param>
+            <param name="execute">While true, (re)applies the association every frame. Connect a bang to do it once.</param>
+        </member>
+        <member name="T:System.Windows.FiletypeAssociation.SetFiletypeAssociationProtected">
+             <summary>
+             Sets the *effective* default handler for a file extension on Windows 10/11 by writing a
+             valid, hash-protected UserChoice key for the current user (the reverse-engineered SetUserFTA
+             algorithm). Unlike SetFileAssociations, this overrides an existing UserChoice. Runs while
+             Execute is true.
+            
+             Note: this relies on undocumented Windows internals. It works for normal extensions but not
+             for types guarded by the UserChoice Protection Driver (UCPD.sys), e.g. browsers and .pdf.
+             Must run as the interactive user.
+             </summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.SetFiletypeAssociationProtected.#ctor(VL.Core.NodeContext)">
+            <summary>Initializes the node and acquires a logger from the node context.</summary>
+        </member>
+        <member name="M:System.Windows.FiletypeAssociation.SetFiletypeAssociationProtected.Update(System.Boolean@,System.String@,System.String@,VL.Lib.IO.Path,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Forces the *effective* default app for a file extension on Windows 10/11 by writing the
+            hash-protected UserChoice key for the current user. Unlike SetFiletypeAssociation, this
+            overrides an existing default that the user already picked. Works for normal extensions
+            (e.g. .vl), but NOT for types Windows guards specially such as browsers and .pdf.
+            Runs while Execute is true - connect a bang.
+            </summary>
+            <param name="success">True if the new default was written and Windows accepted it.</param>
+            <param name="writtenHash">The Base64 UserChoice hash that was written (diagnostics only).</param>
+            <param name="lastError">Message of the last error, or empty if the last apply succeeded.</param>
+            <param name="applicationFilePath">Path to the program that should open the file, e.g. the vvvv.exe.</param>
+            <param name="extension">File extension to associate, with the leading dot, e.g. '.vl'.</param>
+            <param name="progId">Internal identifier registered for this file type, e.g. 'vvvv'. Any unique name; reuse the same one to update an existing association.</param>
+            <param name="fileTypeDescription">Friendly name shown for the file type in Explorer, e.g. 'vvvv gamma document'.</param>
+            <param name="arguments">What is passed to the program after the .exe path. Use %1 as the placeholder for the double-clicked file. Default "%1" just opens the file; e.g. '-o "%1"' adds a flag in front.</param>
+            <param name="execute">While true, (re)applies the association every frame. Connect a bang to do it once.</param>
+        </member>
+    </members>
+</doc>

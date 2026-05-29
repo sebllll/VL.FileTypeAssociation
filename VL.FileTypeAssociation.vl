@@ -14,7 +14,7 @@
         </p:NodeReference>
         <Patch Id="K02bk7ghvrMO5CzxocCXdz">
           <Canvas Id="JSymv5IBf4gMSMFRyXRa7K" CanvasType="Group">
-            <Pad Id="UKvILYWqpkePmOLvzfSfHC" Comment="Extension" Bounds="453,156,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
+            <Pad Id="UKvILYWqpkePmOLvzfSfHC" Comment="Extension" Bounds="418,160,35,15" ShowValueBox="true" isIOBox="true" Value=".vl">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -25,54 +25,41 @@
               </p:TypeAnnotation>
             </Pad>
             <ControlPoint Id="Ph8Z3mPjPf5Leu1fzk9A2K" Bounds="361,290" />
-            <Node Bounds="347,180,121,89" Id="CfQk7GoHG1OQJwvIhbMUws">
-              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
-                <FullNameCategoryReference ID="Primitive" />
+            <ControlPoint Id="Hek8YIoeHGoMTGPmaRcR0K" Bounds="475,180" />
+            <Node Bounds="359,200,119,19" Id="DA6EkqBdVQzMxOV51KTRHS">
+              <p:NodeReference LastCategoryFullName="System.Windows.FiletypeAssociation" LastDependency="FiletypeAssoc.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="GetFiletypeAssociation" />
+                <PinReference Kind="InputPin" Name="Execute" />
+                <PinReference Kind="OutputPin" Name="Last Error" />
               </p:NodeReference>
-              <Pin Id="V0psyuv32vaLNKWs5msm1V" Name="Force" Kind="InputPin" />
-              <Pin Id="OwN7vCq2t4WLVbUEg5MsBf" Name="Dispose Cached Outputs" Kind="InputPin" />
-              <Pin Id="GrtYGKKhvf3L2BeYlbq6Dk" Name="Has Changed" Kind="OutputPin" />
-              <Patch Id="Pl38XfapyukORWQoYbOFWQ" ManuallySortedPins="true">
-                <Patch Id="HOFrkGlISh2QIrFeWlgxWV" Name="Create" ManuallySortedPins="true" />
-                <Patch Id="Jw4ut5hbFkmO32xSkbNhFK" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="359,220,58,19" Id="DA6EkqBdVQzMxOV51KTRHS">
-                  <p:NodeReference LastCategoryFullName="FiletypeAssoc" LastDependency="FiletypeAssoc.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="FiletypeAssoc" />
-                    <Choice Kind="ProcessAppFlag" Name="QueryAPI" />
-                  </p:NodeReference>
-                  <Pin Id="RKQVsOQ5VpHLeMWcxp04Kr" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                  <Pin Id="EyZZZJYnEeONqJiv5sBTjd" Name="Association" Kind="InputPin" />
-                  <Pin Id="GR42pTnavpcLirzPh4Dm2I" Name="Extension" Kind="InputPin" />
-                  <Pin Id="EEBMQwuISFlMNiwiWhIm6F" Name="Result" Kind="OutputPin" />
-                </Node>
-              </Patch>
-              <ControlPoint Id="RsZzXieVdCnN1sJDelSA89" Bounds="453,186" Alignment="Top" />
-              <ControlPoint Id="TsQNlGuw7IOMzNP2qFLmsB" Bounds="361,186" Alignment="Top" />
-              <ControlPoint Id="NQ3L1h7Jnn2LIwrgWJBBfO" Bounds="361,263" Alignment="Bottom" />
+              <Pin Id="RKQVsOQ5VpHLeMWcxp04Kr" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="EyZZZJYnEeONqJiv5sBTjd" Name="Association" Kind="InputPin" />
+              <Pin Id="GR42pTnavpcLirzPh4Dm2I" Name="Extension" Kind="InputPin" />
+              <Pin Id="EEBMQwuISFlMNiwiWhIm6F" Name="Result" Kind="OutputPin" />
+              <Pin Id="VWAGLtEqDNGPE5DnJiRsnr" Name="Execute" Kind="InputPin" />
+              <Pin Id="GIwjfZu342EMIEqGKcD3UD" Name="Last Error" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="COuII1Zy6lGPZVRYeNXHqF" Bounds="349,107" />
+            <ControlPoint Id="TpqMy0Pty1lLfIWW0foRZO" Bounds="475,290" />
           </Canvas>
           <Patch Id="MO7AcUDxLIINul0KeaPsEq" Name="Create" />
           <Patch Id="V09YA9UQfHANeC8Y4o0VSF" Name="Update">
             <Pin Id="Plh7xqbvC77PYoltYaBz1s" Name="Result" Kind="OutputPin" Bounds="358,240" />
-            <Pin Id="LcuEID8LBBFLQXIx8oq0BX" Name="Force" Kind="InputPin" Bounds="566,153" Visibility="Optional" />
+            <Pin Id="PY07HJHvFAVPR7eEsmuHoa" Name="Execute" Kind="InputPin" />
+            <Pin Id="H7fow83vf7HQRHdQ8csieZ" Name="Last Error" Kind="OutputPin" />
           </Patch>
           <ProcessDefinition Id="PJJRIcM1WgcMLDcA1QQGUC">
             <Fragment Id="UKguZ2K9H9sQHToVo1Sq9h" Patch="MO7AcUDxLIINul0KeaPsEq" Enabled="true" />
             <Fragment Id="GGlvSt0Hr6rQAZsktF0psH" Patch="V09YA9UQfHANeC8Y4o0VSF" Enabled="true" />
           </ProcessDefinition>
           <Link Id="TGgCeXLY2YJOSQOUtTfyi9" Ids="Ph8Z3mPjPf5Leu1fzk9A2K,Plh7xqbvC77PYoltYaBz1s" IsHidden="true" />
-          <Link Id="DEEX5ZrVE8OPvEmuZL0Y4y" Ids="UKvILYWqpkePmOLvzfSfHC,RsZzXieVdCnN1sJDelSA89" />
-          <Link Id="TF46FPNfVTdQRXCRqPRb9j" Ids="RLJhLhpBhyFLyRoQQm3ddF,TsQNlGuw7IOMzNP2qFLmsB" />
-          <Link Id="CtZTGYaK7MhL0iDwXbX1ON" Ids="NQ3L1h7Jnn2LIwrgWJBBfO,Ph8Z3mPjPf5Leu1fzk9A2K" />
-          <Link Id="Q3ny00AvFuLNK5uJQWBnQj" Ids="LcuEID8LBBFLQXIx8oq0BX,COuII1Zy6lGPZVRYeNXHqF" IsHidden="true" />
-          <Link Id="EQxL1lquEHxMj27HjVxAk4" Ids="COuII1Zy6lGPZVRYeNXHqF,V0psyuv32vaLNKWs5msm1V" />
-          <Link Id="J24rrbmWAoKOGiJQGnXngd" Ids="EEBMQwuISFlMNiwiWhIm6F,NQ3L1h7Jnn2LIwrgWJBBfO" />
-          <Link Id="UBpzv7YgiSLMqSZOYHfDJ9" Ids="TsQNlGuw7IOMzNP2qFLmsB,EyZZZJYnEeONqJiv5sBTjd" />
-          <Link Id="NoyOjv4LnPEP5JBxjSyGbb" Ids="RsZzXieVdCnN1sJDelSA89,GR42pTnavpcLirzPh4Dm2I" />
+          <Link Id="Pjg9DJlbQOSNAAe7XXhGRy" Ids="Hek8YIoeHGoMTGPmaRcR0K,VWAGLtEqDNGPE5DnJiRsnr" />
+          <Link Id="DTJgF4bh4ObP3nHRph7dDf" Ids="PY07HJHvFAVPR7eEsmuHoa,Hek8YIoeHGoMTGPmaRcR0K" IsHidden="true" />
+          <Link Id="LdMRFSbD0aUOxec50wfxNo" Ids="RLJhLhpBhyFLyRoQQm3ddF,EyZZZJYnEeONqJiv5sBTjd" />
+          <Link Id="Fi7zUXBVif5NoxsfEXiIPC" Ids="UKvILYWqpkePmOLvzfSfHC,GR42pTnavpcLirzPh4Dm2I" />
+          <Link Id="LklY2Ud046xQNPFwboiEaA" Ids="GIwjfZu342EMIEqGKcD3UD,TpqMy0Pty1lLfIWW0foRZO" />
+          <Link Id="Q4beaOzSMC6O4F7TNqbErG" Ids="TpqMy0Pty1lLfIWW0foRZO,H7fow83vf7HQRHdQ8csieZ" IsHidden="true" />
+          <Link Id="M09PZDurvPIQLNvCGYsTdy" Ids="EEBMQwuISFlMNiwiWhIm6F,Ph8Z3mPjPf5Leu1fzk9A2K" />
         </Patch>
       </Node>
       <!--
@@ -87,213 +74,51 @@
         <Patch Id="OuC7KzgnNLGMx9yoH6ZF9p">
           <Canvas Id="SJJLvNxKJ0nPktLEQhbfY2" CanvasType="Group">
             <ControlPoint Id="SurY3g51tk2OMxUkA4IT6V" Bounds="361,290" />
-            <Node Bounds="347,180,121,99" Id="HTO74vpEBmBLcY3eOxTpFs">
-              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
-                <FullNameCategoryReference ID="Primitive" />
-              </p:NodeReference>
-              <Pin Id="JCEDha6jegIPYFHJpzsvYe" Name="Force" Kind="InputPin" />
-              <Pin Id="LdLlbAfYYzlMvzty5mg8mo" Name="Dispose Cached Outputs" Kind="InputPin" />
-              <Pin Id="TJ8L176c9VhPVmauhOBGTW" Name="Has Changed" Kind="OutputPin" />
-              <Patch Id="C3Q47oII2WYNk3bLJERZ4R" ManuallySortedPins="true">
-                <Patch Id="JvtjMGegPONOjZodpgTviy" Name="Create" ManuallySortedPins="true" />
-                <Patch Id="IfGkH4FkRppOOkvcJHFqJk" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="359,220,58,19" Id="C3Ttzk12B9aNet17LsvJ0E">
-                  <p:NodeReference LastCategoryFullName="FiletypeAssoc" LastDependency="FiletypeAssoc.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="FiletypeAssoc" />
-                    <Choice Kind="ProcessAppFlag" Name="QueryAPI" />
-                  </p:NodeReference>
-                  <Pin Id="BYtQEHPAVxINUQhN5SPyRP" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                  <Pin Id="VWEkJDA7a9ZNCxAVC2rIA1" Name="Association" Kind="InputPin" />
-                  <Pin Id="SpepE8uG7bdMfX3nOtjjr1" Name="Extension" Kind="InputPin" />
-                  <Pin Id="Ls9m56cX4aZNRgzcdchUfE" Name="Result" Kind="OutputPin" />
-                </Node>
-              </Patch>
-              <ControlPoint Id="SpH1PKOJHKnOYYLa8hosuT" Bounds="453,186" Alignment="Top" />
-              <ControlPoint Id="IFBIThHpfIRMGWRiHDwnjd" Bounds="361,186" Alignment="Top" />
-              <ControlPoint Id="M95CSr1f3k7Oanxf3zvx3r" Bounds="361,273" Alignment="Bottom" />
-            </Node>
-            <ControlPoint Id="BMvtBmY3n9YMFWhHqQIdeP" Bounds="453,150" />
+            <ControlPoint Id="BMvtBmY3n9YMFWhHqQIdeP" Bounds="418,131" />
             <Pad Id="DGlOkL3dh4NQSOHGKoF8Q3" Comment="" Bounds="361,100,141,15" ShowValueBox="true" isIOBox="true" Value="Executable">
               <p:TypeAnnotation LastCategoryFullName="System.QueryAPI" LastDependency="FiletypeAssoc.dll">
                 <Choice Kind="TypeFlag" Name="AssocStr" />
               </p:TypeAnnotation>
             </Pad>
-            <ControlPoint Id="LHpGAZQntUXOviXfR9dMpR" Bounds="566,153" />
+            <ControlPoint Id="N08zJNIm8UMLSQQTcOjhN7" Bounds="475,170" />
+            <Node Bounds="359,210,119,19" Id="C3Ttzk12B9aNet17LsvJ0E">
+              <p:NodeReference LastCategoryFullName="System.Windows.FiletypeAssociation" LastDependency="FiletypeAssoc.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="GetFiletypeAssociation" />
+                <PinReference Kind="InputPin" Name="Execute" />
+                <PinReference Kind="OutputPin" Name="Last Error" />
+              </p:NodeReference>
+              <Pin Id="BYtQEHPAVxINUQhN5SPyRP" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="VWEkJDA7a9ZNCxAVC2rIA1" Name="Association" Kind="InputPin" />
+              <Pin Id="SpepE8uG7bdMfX3nOtjjr1" Name="Extension" Kind="InputPin" />
+              <Pin Id="Ls9m56cX4aZNRgzcdchUfE" Name="Result" Kind="OutputPin" />
+              <Pin Id="FXgHrVOiPXCLeOO9BR3h8I" Name="Execute" Kind="InputPin" />
+              <Pin Id="GpF6UnL2virPUwDp6Ff0jc" Name="Last Error" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="Mpm9512odW4MmzYJLTnrR1" Bounds="475,290" />
           </Canvas>
           <Patch Id="ESGAVXXwIcMOJzqBorfQOb" Name="Create" />
           <Patch Id="I4g0HVIta8kQEDScNtEnip" Name="Update">
             <Pin Id="N1zcXZh9OywMfHUwD49YXM" Name="Result" Kind="OutputPin" Bounds="358,240" />
             <Pin Id="CIUmVG2vdanLSHFMd4Yjhf" Name="Extension" Kind="InputPin" Bounds="524,175" />
-            <Pin Id="EWpsRFT5IdWNFgcSwp11hL" Name="Force" Kind="InputPin" Bounds="566,153" Visibility="Optional" />
+            <Pin Id="SEulMrxHRIgLIqdXcASYxY" Name="Execute" Kind="InputPin" />
+            <Pin Id="O7VsQdh7W7JL2uo3REXaku" Name="Last Error" Kind="OutputPin" />
           </Patch>
           <ProcessDefinition Id="JRBShjli6VsMhuZOGxVtah">
             <Fragment Id="B6t6NqfuzYqQLXZTSKV4JP" Patch="ESGAVXXwIcMOJzqBorfQOb" Enabled="true" />
             <Fragment Id="VMKaSRHiRmLNjcAzMs4Zi1" Patch="I4g0HVIta8kQEDScNtEnip" Enabled="true" />
           </ProcessDefinition>
           <Link Id="RX6PYdc5QExLctX3oUBTbo" Ids="SurY3g51tk2OMxUkA4IT6V,N1zcXZh9OywMfHUwD49YXM" IsHidden="true" />
-          <Link Id="RFzNryNygWwPe7onsu4fkp" Ids="M95CSr1f3k7Oanxf3zvx3r,SurY3g51tk2OMxUkA4IT6V" />
-          <Link Id="PvQsov305SZLLC7ef715I9" Ids="BMvtBmY3n9YMFWhHqQIdeP,SpH1PKOJHKnOYYLa8hosuT" />
           <Link Id="NcFniTMJpSsOFLxQuZkhS3" Ids="CIUmVG2vdanLSHFMd4Yjhf,BMvtBmY3n9YMFWhHqQIdeP" IsHidden="true" />
-          <Link Id="USI6u6qz6EePz8X3q9re1D" Ids="DGlOkL3dh4NQSOHGKoF8Q3,IFBIThHpfIRMGWRiHDwnjd" />
-          <Link Id="JqwBmMYDDR5MtvjdcAEbsm" Ids="LHpGAZQntUXOviXfR9dMpR,JCEDha6jegIPYFHJpzsvYe" />
-          <Link Id="O6n469MCSSSNZ29cs4URBw" Ids="EWpsRFT5IdWNFgcSwp11hL,LHpGAZQntUXOviXfR9dMpR" IsHidden="true" />
-          <Link Id="PsMc9paeocON2AnQq3KFBz" Ids="Ls9m56cX4aZNRgzcdchUfE,M95CSr1f3k7Oanxf3zvx3r" />
-          <Link Id="Po1KJParF33MrmM2Droyz6" Ids="IFBIThHpfIRMGWRiHDwnjd,VWEkJDA7a9ZNCxAVC2rIA1" />
-          <Link Id="T3hCkjtxlHbQBIgnesYgmJ" Ids="SpH1PKOJHKnOYYLa8hosuT,SpepE8uG7bdMfX3nOtjjr1" />
+          <Link Id="NqpKMOgbnd7MI7pCGCmoFe" Ids="N08zJNIm8UMLSQQTcOjhN7,FXgHrVOiPXCLeOO9BR3h8I" />
+          <Link Id="Jb5Q1Sa6HzCMYrygz2QcLO" Ids="SEulMrxHRIgLIqdXcASYxY,N08zJNIm8UMLSQQTcOjhN7" IsHidden="true" />
+          <Link Id="JEDgicfEv82NjGMpVTmDsj" Ids="DGlOkL3dh4NQSOHGKoF8Q3,VWEkJDA7a9ZNCxAVC2rIA1" />
+          <Link Id="LyEfNn8vO9aNISyhfArARH" Ids="BMvtBmY3n9YMFWhHqQIdeP,SpepE8uG7bdMfX3nOtjjr1" />
+          <Link Id="SbHOJYY1TkxPNQfG2ODoSu" Ids="Ls9m56cX4aZNRgzcdchUfE,SurY3g51tk2OMxUkA4IT6V" />
+          <Link Id="LvehFejWCwYPnnYEqUCAUN" Ids="GpF6UnL2virPUwDp6Ff0jc,Mpm9512odW4MmzYJLTnrR1" />
+          <Link Id="AH2eoTnixGSQPMvwM767gr" Ids="Mpm9512odW4MmzYJLTnrR1,O7VsQdh7W7JL2uo3REXaku" IsHidden="true" />
         </Patch>
       </Node>
-      <Canvas Id="DFVlcKKMPzrMZ7fV4rRU54" Name="Advanced" Position="298,339">
-        <!--
-
-    ************************ GetAssociation ************************
-
--->
-        <Node Name="GetAssociation" Bounds="423,340" Id="FdV9mXZ2LIxOLBE82nYNjs">
-          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
-            <Choice Kind="ContainerDefinition" Name="Process" />
-          </p:NodeReference>
-          <Patch Id="KafkOuIPPJXLXXpc0R7BYG">
-            <Canvas Id="BCqIw64hBlRNoMLG3C19qE" CanvasType="Group">
-              <ControlPoint Id="CYSLKQUgPcCOLnLUoKYmMq" Bounds="361,331" />
-              <Node Bounds="347,180,121,112" Id="Va8Z7oOdlvdL5DjeihODqC">
-                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                  <Choice Kind="ProcessStatefulRegion" Name="Cache" />
-                  <FullNameCategoryReference ID="Primitive" />
-                </p:NodeReference>
-                <Pin Id="AJ1i39FO6FmMlWHjHKYseQ" Name="Force" Kind="InputPin" />
-                <Pin Id="OUxO7hIwKShOhNKf4eB6Ha" Name="Dispose Cached Outputs" Kind="InputPin" />
-                <Pin Id="Hkk03nHFNxSOFWMzK8fwLg" Name="Has Changed" Kind="OutputPin" />
-                <Patch Id="MhptxacgRcALWtSQ9o187c" ManuallySortedPins="true">
-                  <Patch Id="PqTgXsWLAEPP9uNrKMW98G" Name="Create" ManuallySortedPins="true" />
-                  <Patch Id="BOc4Th7VcRMNwvYAz0c0Lr" Name="Then" ManuallySortedPins="true" />
-                  <Node Bounds="359,240,58,19" Id="MfzI5H0URIRQYODSdresPU">
-                    <p:NodeReference LastCategoryFullName="FiletypeAssoc" LastDependency="FiletypeAssoc.dll">
-                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="ProcessAppFlag" Name="QueryAPI" />
-                    </p:NodeReference>
-                    <Pin Id="FMxg6bDqhbyMRL7EhJzruW" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                    <Pin Id="Sd43c22ZmWBOaNtc7L3ez0" Name="Association" Kind="InputPin" />
-                    <Pin Id="VlDxMNHXSeiNPk528eZwbd" Name="Extension" Kind="InputPin" />
-                    <Pin Id="GJ3hWN9igbdNUzboAMinOl" Name="Result" Kind="OutputPin" />
-                  </Node>
-                </Patch>
-                <ControlPoint Id="QI2IEx2a6tEOwoPjudBtZ9" Bounds="453,186" Alignment="Top" />
-                <ControlPoint Id="StcaKk0dXGdOABGwoHwwNH" Bounds="361,186" Alignment="Top" />
-                <ControlPoint Id="VFaKVHc0rdROI8NEczVfNj" Bounds="361,286" Alignment="Bottom" />
-              </Node>
-              <ControlPoint Id="OxxAGv6WMbEPswqm5NgvYG" Bounds="453,142" />
-              <ControlPoint Id="IfwiA6TrytILyBp905Fp4r" Bounds="361,142" />
-              <ControlPoint Id="AixFl0g1EbUOArRlCVxBWC" Bounds="540,142" />
-            </Canvas>
-            <ProcessDefinition Id="Lb215tGM92eMOj0CUwpUd9">
-              <Fragment Id="HcPWlOgPoCeQKOcG3FCSHG" Patch="Ah2Vxl7zZ4dMFRT8kRb55Z" Enabled="true" />
-              <Fragment Id="GrEFtCsDRL5NChhhd6mzIy" Patch="K1lxphqTpk8MVRIkFGmiK4" Enabled="true" />
-            </ProcessDefinition>
-            <Link Id="IhmsencXNvNPeyE7N7nkse" Ids="CYSLKQUgPcCOLnLUoKYmMq,DQ00g0UqQXMLP94wLeSGPf" IsHidden="true" />
-            <Link Id="EB9eDq3WuBNMjKWJdZby6r" Ids="VFaKVHc0rdROI8NEczVfNj,CYSLKQUgPcCOLnLUoKYmMq" />
-            <Link Id="EbVuDbK6XwcQdXRHDvo9br" Ids="OxxAGv6WMbEPswqm5NgvYG,QI2IEx2a6tEOwoPjudBtZ9" />
-            <Link Id="TJdkoSZiO01P7E3rTA5zua" Ids="JUssXrFBeIxOzOLGr2xLmx,OxxAGv6WMbEPswqm5NgvYG" IsHidden="true" />
-            <Link Id="TwAnBDX3BVZNlULqRJjslB" Ids="IfwiA6TrytILyBp905Fp4r,StcaKk0dXGdOABGwoHwwNH" />
-            <Link Id="UaFVdV7kuHyLo3IOb3wrgZ" Ids="BPRRvAY9qTyOshnIlS9WME,IfwiA6TrytILyBp905Fp4r" IsHidden="true" />
-            <Link Id="GKD8dZasCUMMlmgopptN3f" Ids="S4w3ogRtWwoN8uOtxj7zJe,AixFl0g1EbUOArRlCVxBWC" IsHidden="true" />
-            <Link Id="Ndr4STzRImtNzWiP1OCBBy" Ids="AixFl0g1EbUOArRlCVxBWC,AJ1i39FO6FmMlWHjHKYseQ" />
-            <Patch Id="Ah2Vxl7zZ4dMFRT8kRb55Z" Name="Create" />
-            <Patch Id="K1lxphqTpk8MVRIkFGmiK4" Name="Update">
-              <Pin Id="BPRRvAY9qTyOshnIlS9WME" Name="Association" Kind="InputPin" Bounds="349,80" />
-              <Pin Id="JUssXrFBeIxOzOLGr2xLmx" Name="Extension" Kind="InputPin" Bounds="524,175" />
-              <Pin Id="S4w3ogRtWwoN8uOtxj7zJe" Name="Force" Kind="InputPin" Bounds="566,153" Visibility="Optional" />
-              <Pin Id="DQ00g0UqQXMLP94wLeSGPf" Name="Result" Kind="OutputPin" Bounds="358,240" />
-            </Patch>
-            <Link Id="L6gfJUKoCGsPKkfHda6oJU" Ids="StcaKk0dXGdOABGwoHwwNH,Sd43c22ZmWBOaNtc7L3ez0" />
-            <Link Id="GlvBhPPNEgKND56tMiHHr6" Ids="QI2IEx2a6tEOwoPjudBtZ9,VlDxMNHXSeiNPk528eZwbd" />
-            <Link Id="K7hZDBg4Dw1NcM6cLqzL77" Ids="GJ3hWN9igbdNUzboAMinOl,VFaKVHc0rdROI8NEczVfNj" />
-          </Patch>
-        </Node>
-        <!--
-
-    ************************ SetAssociation ************************
-
--->
-        <Node Name="SetAssociation" Bounds="423,392" Id="Cw3JvqddDaOPZIV8R4Ytxy">
-          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
-            <Choice Kind="ContainerDefinition" Name="Process" />
-          </p:NodeReference>
-          <Patch Id="L6bSr5Z2h66PcT5R14YIN1">
-            <Canvas Id="Ky5pXZmyUxlLAjVk3ni71x" CanvasType="Group">
-              <ControlPoint Id="MeiMBE3UFCkOuM23bqH7mG" Bounds="603,190" />
-              <ControlPoint Id="E4hfe93K41SLbfZ0iEjVy1" Bounds="726,190" />
-              <ControlPoint Id="CV9T92bVT9qLgOoIXjPQXs" Bounds="796,190" />
-              <ControlPoint Id="SUO3vY3bGiiPJoGVmwhSBy" Bounds="850,190" />
-              <ControlPoint Id="Lmot8w4kKuYP75EqZ6Z6GZ" Bounds="965,190" />
-              <ControlPoint Id="O6O8XFAllLLLnlW8KJ3xqt" Bounds="529,461" />
-              <Node Bounds="527,361,103,19" Id="FEbNzIrj3nfNvAWrCU0Ibt">
-                <p:NodeReference LastCategoryFullName="FiletypeAssoc" LastDependency="FiletypeAssoc.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="SetFileAssociations" />
-                </p:NodeReference>
-                <Pin Id="OFnAAmC6uYtMc6vIkWTcMa" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                <Pin Id="RsMKJOYgk4mLfUzHnXueqR" Name="Extension" Kind="InputPin" />
-                <Pin Id="ArMWGKHLGw5NH6VD2wKuoc" Name="Prog Id" Kind="InputPin" />
-                <Pin Id="LhqAKMteAm5PbmO5BeREcQ" Name="File Type Description" Kind="InputPin" />
-                <Pin Id="GJ1vBHPsYrMPkQ1WgqOyaQ" Name="Application File Path" Kind="InputPin" />
-                <Pin Id="QPZm2fbcFobQbwlidS49qr" Name="Set" Kind="InputPin" />
-                <Pin Id="VQTpzJi0Ni3Nm5FJ0OHfsl" Name="Made Changes" Kind="OutputPin" />
-                <Pin Id="JQDB30twBNOMw5HMkP0FEa" Name="Last Error" Kind="OutputPin" />
-              </Node>
-              <Node Bounds="601,290,55,19" Id="T1FCjOkJD2xOECfmtIu8a3">
-                <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="OperationCallFlag" Name="ToString" />
-                </p:NodeReference>
-                <Pin Id="HrGfboWyEhqNEQp8t6fEEs" Name="Input" Kind="InputPin" />
-                <Pin Id="L3aqfTUiTekLGy0KKcqFcC" Name="Result" Kind="OutputPin" />
-              </Node>
-              <ControlPoint Id="V19tHZ8dzfDNNAYTz8KvxQ" Bounds="627,400" />
-              <ControlPoint Id="NGb8BV3l1voNbew0DXToez" Bounds="529,242" />
-              <ControlPoint Id="Gia2AnaawXFMup5w0IQgq9" Bounds="553,263" />
-              <ControlPoint Id="PM9MJwReAcZPWSwWREk6ot" Bounds="578,277" />
-              <ControlPoint Id="CELHDxoyhXpOTuh1jz7I1A" Bounds="627,329" />
-            </Canvas>
-            <ProcessDefinition Id="HpUxwFYIsrUPTmaYNR6fTC">
-              <Fragment Id="VnAU1xsYkCjOgluPQfNdd0" Patch="CR36ZXeOO2zOsXC8eBgvmL" Enabled="true" />
-              <Fragment Id="LxkakNolHvPNhFftGCrm94" Patch="NSrKXTqBowKOJD7G1BrHwk" Enabled="true" />
-            </ProcessDefinition>
-            <Link Id="UnFYEec07QYNuBTP7GXTmY" Ids="CZrPt3zu8f3LGg2vy3393S,MeiMBE3UFCkOuM23bqH7mG" IsHidden="true" />
-            <Link Id="Bi64IH9XZfpMVHNcBFHnqT" Ids="KCK8wjaF7ygO4PgQPJvber,E4hfe93K41SLbfZ0iEjVy1" IsHidden="true" />
-            <Link Id="OTvfEJ0aadHMa5i3drKYbD" Ids="DWVU2VPGEW9LCV4QJyg6h9,CV9T92bVT9qLgOoIXjPQXs" IsHidden="true" />
-            <Link Id="Vgxn96uT64NLMgn7M6gh8J" Ids="OpuJFV4ggRFMnAGeJWhn39,SUO3vY3bGiiPJoGVmwhSBy" IsHidden="true" />
-            <Link Id="Ivvr7q8kMnMQWgHUSUvohP" Ids="GAhsx5fKSRcLQQy0iV0ldd,Lmot8w4kKuYP75EqZ6Z6GZ" IsHidden="true" />
-            <Link Id="BJGAe9TXqJcMxmoD7RiCrl" Ids="O6O8XFAllLLLnlW8KJ3xqt,V1h7u8HUDUUN66QX4kpagL" IsHidden="true" />
-            <Patch Id="CR36ZXeOO2zOsXC8eBgvmL" Name="Create" />
-            <Patch Id="NSrKXTqBowKOJD7G1BrHwk" Name="Update">
-              <Pin Id="CZrPt3zu8f3LGg2vy3393S" Name="Executable FilePath" Kind="InputPin" Bounds="660,219" DefaultValue="">
-                <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
-                  <Choice Kind="TypeFlag" Name="Path" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="KCK8wjaF7ygO4PgQPJvber" Name="Extension" Kind="InputPin" Bounds="782,230" />
-              <Pin Id="DWVU2VPGEW9LCV4QJyg6h9" Name="ProgID" Kind="InputPin" Bounds="872,236" />
-              <Pin Id="OpuJFV4ggRFMnAGeJWhn39" Name="FileType Description" Kind="InputPin" Bounds="969,239" />
-              <Pin Id="GAhsx5fKSRcLQQy0iV0ldd" Name="Force" Kind="InputPin" Bounds="1014,226" Visibility="Optional" />
-              <Pin Id="V1h7u8HUDUUN66QX4kpagL" Name="new Association Set" Kind="OutputPin" Bounds="682,620" />
-              <Pin Id="Pr0r6YNaE6lNPUQTMP62sm" Name="Last Error" Kind="OutputPin" />
-            </Patch>
-            <Link Id="MgHjRDNB66kQUL38VsJ5i7" Ids="MeiMBE3UFCkOuM23bqH7mG,HrGfboWyEhqNEQp8t6fEEs" />
-            <Link Id="D88xUjXnpmXQAIfAQtRLiG" Ids="L3aqfTUiTekLGy0KKcqFcC,GJ1vBHPsYrMPkQ1WgqOyaQ" />
-            <Link Id="Lp7evq0eH7LLvcCo3rnLTW" Ids="CV9T92bVT9qLgOoIXjPQXs,Gia2AnaawXFMup5w0IQgq9,ArMWGKHLGw5NH6VD2wKuoc" />
-            <Link Id="HAZaAgIwjsXOUWgEqnzeRI" Ids="SUO3vY3bGiiPJoGVmwhSBy,PM9MJwReAcZPWSwWREk6ot,LhqAKMteAm5PbmO5BeREcQ" />
-            <Link Id="HpbDQzQo1vsL4UFw0yrHrK" Ids="Lmot8w4kKuYP75EqZ6Z6GZ,CELHDxoyhXpOTuh1jz7I1A,QPZm2fbcFobQbwlidS49qr" />
-            <Link Id="TjjB0gjSM5rOUfkGW71NGf" Ids="VQTpzJi0Ni3Nm5FJ0OHfsl,O6O8XFAllLLLnlW8KJ3xqt" />
-            <Link Id="BlbUkhBqw9iM8V4Pm2ZijH" Ids="JQDB30twBNOMw5HMkP0FEa,V19tHZ8dzfDNNAYTz8KvxQ" />
-            <Link Id="Ey5IZEGrkk7PbaKUqtsVLZ" Ids="V19tHZ8dzfDNNAYTz8KvxQ,Pr0r6YNaE6lNPUQTMP62sm" IsHidden="true" />
-            <Link Id="CWu5mzSziCaNcnsgVJX3ea" Ids="E4hfe93K41SLbfZ0iEjVy1,NGb8BV3l1voNbew0DXToez,RsMKJOYgk4mLfUzHnXueqR" />
-          </Patch>
-        </Node>
-      </Canvas>
     </Canvas>
     <!--
 
@@ -318,5 +143,5 @@
   </Patch>
   <NugetDependency Id="Hu2UoaRc8FyQZnDFiZvJJL" Location="VL.Skia" Version="2025.7.2" />
   <PlatformDependency Id="JHemJ8Gkbw3NiSnVxZVP9z" Location="Microsoft.Win32.Primitives" />
-  <PlatformDependency Id="DjOEegZ4xJDMcmlIiP49Gt" Location="./lib/net8.0/FiletypeAssoc.dll" />
+  <PlatformDependency Id="DjOEegZ4xJDMcmlIiP49Gt" Location="./lib/net8.0/FiletypeAssoc.dll" IsForward="true" />
 </Document>
