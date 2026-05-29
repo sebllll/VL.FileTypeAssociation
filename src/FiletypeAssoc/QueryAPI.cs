@@ -1,12 +1,33 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Text;
+using Microsoft.Extensions.Logging;
+using VL.Core;
+using VL.Core.Import;
 
-namespace System
+namespace FiletypeAssoc
 {
+    /// <summary>
+    /// Queries Windows for the string associated with a file extension or protocol
+    /// (executable, friendly name, default icon, etc.) via the Shlwapi AssocQueryString API.
+    /// </summary>
+    [ProcessNode]
     public class QueryAPI
     {
-        public static string AssocQueryString(AssocStr association, string extension)
+        private readonly ILogger _logger;
+
+        /// <summary>Initializes the node and acquires a logger from the node context.</summary>
+        public QueryAPI(NodeContext nodeContext)
+        {
+            _logger = nodeContext.GetLogger();
+        }
+
+        /// <summary>
+        /// Returns the association string of the requested kind for the given extension or protocol.
+        /// </summary>
+        /// <param name="association">Which associated string to retrieve (e.g. Executable, FriendlyAppName, DefaultIcon).</param>
+        /// <param name="extension">File extension (e.g. '.txt') or protocol to query.</param>
+        public string AssocQueryString(AssocStr association, string extension)
         {
             const int S_OK = 0;
             const int S_FALSE = 1;
@@ -15,6 +36,9 @@ namespace System
             uint ret = AssocQueryString(AssocF.None, association, extension, null, null, ref length);
             if (ret != S_FALSE)
             {
+                _logger.LogWarning(
+                    "AssocQueryString({Association}, {Extension}): length probe returned 0x{Ret:X8} (expected S_FALSE) - no association found.",
+                    association, extension, ret);
                 throw new InvalidOperationException("Could not determine associated string");
             }
 
@@ -22,10 +46,15 @@ namespace System
             ret = AssocQueryString(AssocF.None, association, extension, null, sb, ref length);
             if (ret != S_OK)
             {
+                _logger.LogWarning(
+                    "AssocQueryString({Association}, {Extension}): value query returned 0x{Ret:X8} (expected S_OK).",
+                    association, extension, ret);
                 throw new InvalidOperationException("Could not determine associated string");
             }
 
-            return sb.ToString();
+            var result = sb.ToString();
+            _logger.LogDebug("AssocQueryString({Association}, {Extension}) = '{Result}'", association, extension, result);
+            return result;
         }
 
 
